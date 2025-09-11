@@ -1,9 +1,10 @@
-name: Daily Hidden Commit
+name: Daily Random Commits
 
 on:
   schedule:
-    - cron: '0 9 * * *'  # every day at 9:00 UTC
-  workflow_dispatch:      # allows manual run
+    - cron: '0 0 * * *'   # triggers at 00:00 UTC (will randomize inside)
+    - cron: '0 12 * * *'  # triggers at 12:00 UTC (also randomized)
+  workflow_dispatch:
 
 jobs:
   commit:
@@ -11,11 +12,18 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Create hidden dummy file and commit
+      - name: Random wait before commit
         run: |
-          echo "Daily update $(date)" >> .daily_commit.log
+          # Generate random seconds to sleep (between 0 and 5 hours = 18000s)
+          SLEEP=$(( RANDOM % 18000 ))
+          echo "Sleeping $SLEEP seconds before committing..."
+          sleep $SLEEP
+
+      - name: Make hidden commit
+        run: |
+          echo "Update $(date)" >> .daily_commit.log
           git config --global user.name "andreas-tzegas"
           git config --global user.email "andreastzegas0@gmail.com"
           git add .daily_commit.log
-          git commit -m "Daily automated commit $(date '+%Y-%m-%d')" || echo "No changes to commit"
+          git commit -m "Random automated commit $(date '+%Y-%m-%d %H:%M:%S')" || echo "No changes"
           git push

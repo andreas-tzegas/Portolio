@@ -5,8 +5,8 @@ permissions:
 
 on:
   schedule:
-    - cron: '0 9 * * *'   # premier commit (UTC)
-    - cron: '0 17 * * *'  # deuxième commit (UTC)
+    - cron: '0 9 * * *'   # 11h France (UTC+2)
+    - cron: '0 17 * * *'  # 19h France
   workflow_dispatch:
 
 jobs:
@@ -18,20 +18,25 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Make random commit
+      - name: Configure Git
         run: |
-          echo "$(date) Random automated commit $RANDOM" >> .daily_commit.log
-
-      - name: Commit changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: First commit
+        run: |
+          echo "Commit 1 at $(date) $RANDOM" >> .daily_commit.log
           git add .daily_commit.log
-          git commit -m "Random automated commit $(date)" || echo "No changes to commit"
+          git commit -m "chore(auto): first commit $(date)" || echo "No changes to commit"
+
+      - name: Second commit
+        run: |
+          echo "Commit 2 at $(date) $RANDOM" >> .daily_commit.log
+          git add .daily_commit.log
+          git commit -m "chore(auto): second commit $(date)" || echo "No changes to commit"
 
       - name: Push changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # on force la branche par défaut (main)
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }} HEAD:main

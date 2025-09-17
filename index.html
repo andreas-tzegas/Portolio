@@ -23,25 +23,17 @@
         <!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li class="current"><a href="index.html">Homepage</a></li>
+						<li class="current"><a href="index.html">Accueil</a></li>
 						<li>
-							<a href="#">Dropdown</a>
+							<a href="#">Menu</a>
 							<ul>
-								<li><a href="#">About Me</a></li>
-								<li><a href="#">Parcours</a></li>
-								<li>
-									<a href="#">Projects</a>
-									<ul>
-										<li><a href="#">Projet 1</a></li>
-										<li><a href="#">Projet 2</a></li>
-										<li><a href="#">Projet 3</a></li>
-										<li><a href="#">Projet 4</a></li>
-									</ul>
-								</li>
+								<li><a href="#propos">À propos de moi</a></li>
+								<li><a href="#projects">Projects</a></li>
+                                <li><a href="contact.html">Contactez-moi</a></li>
 							</ul>
 						</li>
-						<li><a href="#">C.V.</a></li>
-						<li><a href="#">Other</a></li>
+						<li><a href="/assets/Andreas_Xega_CV.pdf">Mon CV</a></li>
+						<li><a href="#">Autre</a></li>
 					</ul>
 				</nav>
 
@@ -49,8 +41,8 @@
 				<section id="banner">
 					<div class="content">
 						<h2>Bienvenu dans mon Porfolio!</h2>
-						<p>Un modèle de site web responsif construit avec HTML, CSS et Javacript !</p>
-                        <a href="#main" class="button scrolly">Button</a>  
+						<p>Portfolio construit avec HTML, CSS et JavaScript !</p>
+                        <a href="#main" class="button scrolly">En savoir plus</a>  
 					</div>
 				</section>
                 
@@ -62,7 +54,7 @@
                     <div class="col-12">
 
                         <!-- Blog -->
-                            <section class="box blog">
+                            <section class="box blog" id="propos">
                                 <h2 class="major"><span>À propos de moi</span></h2>
                                 <div>
                                     <div class="row">
@@ -73,13 +65,21 @@
                                                     <article class="box post">
                                                         <header>
                                                             <h3><a href="#">Mon Parcours</a></h3>
-                                                            <p>quoi dire</p>
+                                                            <p>recherche d'alternance</p>
                                                         </header>
                                                         <a href="#" class="image featured"><img src="assets/images/istockphoto-1286354786-612x612.jpg" alt="" /></a>
                                                         <p>
-                                                            Je m'appelle Andreas Xega, j'ai 21 ans. Depuis octobre 2023, j'étudie le développement web.
-                                                            J'ai commencé à apprendre le HTML et le CSS deux mois auparavant. Actuellement, je recherche un stage de deux mois dans le cadre de ma formation, 
-                                                            en vue d'une alternance avec mon école par la suite. Mon objectif est de poursuivre jusqu'au master.
+                                                            Je m'appelle Andreas Xega, j'ai 23 anset je me passionne pour le développement web. 
+                                                            Depuis octobre 2023, je poursuis des études dans ce domaine après avoir suivi une formation bac+2 intensive d’un an.
+                                                            Je suis actuellement à la recherche d’une alternance afin de poursuivre ma formation Bac+3 et Bac+4 avec IT Akademy,
+                                                             continuer mes études et approfondir mes connaissances.
+                                                        </p>
+                                                        <p>
+                                                            
+                                                             Au cours de ma formation, j’ai acquis des compétences solides en HTML, CSS, JavaScript, PHP et SQL, ainsi que dans 
+                                                             l’utilisation de frameworks comme Symfony et Vue.js. Je suis motivé par la création de projets web fonctionnels et esthétiques,
+                                                              et je cherche à mettre mes connaissances en pratique au sein d’une équipe professionnelle, afin de développer 
+                                                              mon expertise et contribuer à des projets concrets.
                                                         </p>
                                                         <!--<a href="#" class="button">Continue Reading</a>-->														<!-- Possiblement utilisable -->
                                                     </article>
@@ -93,32 +93,33 @@
                                                     <ul class="divided">
                                                         <li>
                                                             <article class="box post-summary">
-                                                                <h3><a href="#">HTML & CSS</a></h3>
-                                                                <p>discription</p>
+                                                                <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML & CSS</a></h3>
+                                                                <p>Indispensables pour tous mes projets.
+                                                                     Ces technologies constituent la base de la structure et du design</p>
                                                             </article>
                                                         </li>
                                                         <li>
                                                             <article class="box post-summary">
-                                                                <h3><a href="#">Java Script</a></h3>
-                                                                <p>discription</p>
+                                                                <h3><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">JavaScript</a></h3>
+                                                                <p>Mes compétences en JavaScript me permettent de rendre mes projets web dynamiques et interactifs.</p>
                                                             </article>
                                                         </li>
                                                         <li>
                                                             <article class="box post-summary">
-                                                                <h3><a href="#">SQL</a></h3>
-                                                                <p>discription</p>
+                                                                <h3><a href="https://developer.mozilla.org/en-US/docs/Glossary/SQL" target="_blank">SQL</a></h3>
+                                                                <p> J’utilise SQL pour structurer et exploiter les données nécessaires au bon fonctionnement de mes projets</p>
                                                             </article>
                                                         </li>
                                                         <li>
                                                             <article class="box post-summary">
-                                                                <h3><a href="#">PHP & Symfony</a></h3>
-                                                                <p>discription</p>
+                                                                <h3><a href="https://developer.mozilla.org/en-US/docs/Glossary/PHP" target="_blank">PHP & Symfony</a></h3>
+                                                                <p>applications web dynamiques côté serveur, structurées et performantes</p>
                                                             </article>
                                                         </li>
                                                         <li>
                                                             <article class="box post-summary">
-                                                                <h3><a href="#">Vue JS</a></h3>
-                                                                <p>discription</p>
+                                                                <h3><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Frameworks_libraries/Vue_getting_started" target="_blank">Vue JS</a></h3>
+                                                                <p>Ce framework JavaScript me permet de structurer mes applications front-end</p>
                                                             </article>
                                                         </li>
                                                     </ul>
@@ -133,63 +134,55 @@
                     </div>
                     <div class="col-12">
 
-                        <!-- Features -->
-                            <section class="box features">
-                                <h2 class="major"><span>PROJETCS</span></h2>
+                        <!-- PROJECTS -->
+                            <section class="box features" id="projects">
+                                <h2 class="major"><span>PROJECTS</span></h2>
                                 <div>
                                     <div class="row">
                                         <div class="col-3 col-6-medium col-12-small">
 
-                                            <!-- Feature -->
+                                            <!-- PROJECT -->
                                                 <section class="box feature">
-                                                    <a href="#" class="image featured"><img src="images/istockphoto-1286354786-612x612.jpg" alt="" /></a>
+                                                    <a href="#" class="image featured" target="_blank" ><img src="images/Screenshot 2025-09-12 200018.png" alt="" /></a>
                                                     <h3><a id="project1" href="#">Project 1</a></h3>
-                                                    <p>
-                                                        Pemier Projet !
-                                                    </p>
+                                                    <p>Gestionnaire de taches!</p>
                                                 </section>
 
                                         </div>
                                         <div class="col-3 col-6-medium col-12-small">
 
-                                            <!-- Feature -->
+                                            <!-- PROJECT -->
                                                 <section class="box feature">
-                                                    <a href="#" class="image featured"><img src="images/istockphoto-1286354786-612x612.jpg" alt="" /></a>
+                                                    <a href="#" class="image featured" target="_blank" ><img src="images/Screenshot 2025-09-12 200133.png" alt="" /></a>
                                                     <h3><a href="#">Project 2</a></h3>
-                                                    <p>
-                                                        Deuxieme Project !
-                                                    </p>
+                                                    <p>Liste de courses !</p>
                                                 </section>
 
                                         </div>
                                         <div class="col-3 col-6-medium col-12-small">
 
-                                            <!-- Feature -->
+                                            <!-- PROJECT -->
                                                 <section class="box feature">
-                                                    <a href="#" class="image featured"><img src="images/istockphoto-1286354786-612x612.jpg" alt="" /></a>
+                                                    <a href="#" class="image featured" target="_blank"><img src="images/istockphoto-1286354786-612x612.jpg" alt="" /></a>
                                                     <h3><a href="#">Project 3</a></h3>
-                                                    <p>
-                                                        Troisième Projet !
-                                                    </p>
+                                                    <p>Troisième projet !</p>
                                                 </section>
 
                                         </div>
                                         <div class="col-3 col-6-medium col-12-small">
 
-                                            <!-- Feature -->
+                                            <!-- PROJECT -->
                                                 <section class="box feature">
-                                                    <a href="#" class="image featured"><img src="images/istockphoto-1286354786-612x612.jpg" alt="" /></a>
+                                                    <a href="#" class="image featured" target="_blank"><img src="images/istockphoto-1286354786-612x612.jpg" alt="" /></a>
                                                     <h3><a href="#">Project 4</a></h3>
-                                                    <p>
-                                                        Quatrieme Project !
-                                                    </p>
+                                                    <p>Quatrième projet !</p>
                                                 </section>
 
                                         </div>
                                         <div class="col-12">
                                             <ul class="actions">
-                                                <li><a href="#" class="button large">Do Something</a></li>
-                                                <li><a href="#" class="button alt large">Think About It</a></li>
+                                                <li><a href="contact.html" class="button large">Contactez moi </a></li>
+                                                <li id="backToTop"><a href="#" class="button alt large">↑</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -211,12 +204,12 @@
 
                             <!-- Contact -->
                                 <section>
-                                    <h2 class="major"><span>N'hésitez pas à me contacter</span></h2>
+                                    <h2 class="major"><span>Trouvez moi aussi sur</span></h2>
                                     <ul class="contact">
-                                        <li><a class="icon brands fa-github" href="#"><span class="label">Github</span></a></li>
-                                        <li><a class="icon brands fa-twitter" href="#"><span class="label">Twitter</span></a></li>
-                                        <li><a class="icon brands fa-dribbble" href="https://dribbble.com/Andreas_i_"><span class="label">Dribbble</span></a></li>
-                                        <li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+                                        <li><a class="icon brands fa-github" href="https://github.com/andreas-tzegas" target="_blank"><span class="label">Github</span></a></li>
+                                        <li><a class="icon brands fa-twitter" href="https://x.com/andreastzegas0" target="_blank"><span class="label">Twitter</span></a></li>
+                                        <li><a class="icon brands fa-dribbble" href="https://dribbble.com/Andreas_i_" target="_blank"><span class="label">Dribbble</span></a></li>
+                                        <li><a class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/andreas-xega-ba3b34365/" target="_blank"><span class="label">LinkedIn</span></a></li>
 
                                     </ul>
                                     
